@@ -1,0 +1,261 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* body{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} */
+
+/* weathers */
+
+.App{
+  /* background-image: url('https://wallpaperaccess.com/full/427863.jpg'); */
+  background-image: url('https://s3.envato.com/files/1616804/Preview_image.jpg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
+}
+.App.veryCold{
+  background-image: url('https://wallpaperaccess.com/full/1253817.jpg');
+}
+.App.cold{
+  background-image: url('https://wallpaperaccess.com/full/1253680.jpg');
+} 
+.App.warm{
+  background-image: url('https://i.pinimg.com/originals/79/49/61/794961af57dd026be9f8239b9e0e46aa.jpg');
+}
+.App.hot{
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/1020/792/986/wheat-field-in-the-sunrise-green-ricefield-wallpaper-preview.jpg');
+}
+.App.veryHot{
+  background-image: url('https://thumbs.dreamstime.com/b/hot-weather-25574291.jpg');
+}
+
+main{
+  /* border: 4px solid red; */
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.2),
+    rgba( 0, 0, 0, .75)
+  );
+  padding: 25px;
+}
+.search-box{
+  /* border: 2px solid yellow; */
+  width: 30%;
+  /* margin: 0 0 75px; */
+  margin: 0 auto;
+  margin-bottom: 80px;
+  transition: width 1.2s ease-in-out;
+}
+.search-box:hover,.search-box:focus{
+  width: 37%;
+}
+.search-bar{
+  /* border: 5px solid orange; */
+  text-align: center;
+  letter-spacing: 4px;
+  color: black;
+  background-color: black;
+
+}
+.search-box .search-bar{
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 5px;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: 5px solid black;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  color: red;
+  box-shadow: 0 0 10px 10px;
+  color: rgba(12, 12, 12, 0.342);
+  transition: 1s ease-in-out;
+}
+.search-bar{
+  color: black;
+}
+.search-box .search-bar:focus,.search-box .search-bar:hover {
+  border-color: rgb(64, 64, 105);
+  color: black;
+}
+
+/* #main-box{
+  border: 2px solid green;
+}
+.location-box{
+  border: 1px solid blue;
+}
+.weather-box{
+  border: 2px solid black;
+} */
+
+.location-box .location{
+  color: white;
+  font-size: 3em;
+  margin: 0 3em;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 1s ease-in-out;
+}
+.location-box .location:hover{
+  transform: rotate(2deg) scale(1.1);
+}
+.location-box .date{
+  color: #FFF;
+  font-size: 3em;
+  margin: 0 3em;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 1s ease-in-out;
+}
+.location-box .date:hover{
+  transform: rotate(4deg) scale(1.1);
+}
+.weather-box{
+  text-align: center;
+}
+.weather-box .temp{
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255 , 255 , 255 , 0.2);
+  padding: 15px 25px;
+  color: #FFF;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 6px;
+  transition: transform 1s ease-in-out;
+}
+.weather-box .temp:hover{
+  transform: rotate(6deg) scale(1.1);
+}
+.weather-box .weather{
+  color: #FFF;
+  font-size: 3em;
+  margin: 0 3em;
+  font-weight: bold;
+  transition: transform 1s ease-in-out;
+}
+.weather-box .weather:hover{
+  transform: rotate(4deg) scale(1.1);
+}
+.location.animate{
+  animation: animate 0.4s ease forwards;
+}
+@keyframes animate {
+  0%{
+    color: green;
+    font-size: 0.5rem;
+  }
+  20%{
+    color: rgb(20, 136, 20);
+    font-size: 1rem;
+  }
+  40%{
+    color: rgb(79, 182, 79);
+    font-size: 1.5rem;
+  }
+  60%{
+    color: rgb(116, 189, 116);
+    font-size: 2rem;
+  }
+  80%{
+    color: rgb(151, 204, 151);
+    font-size: 2.5rem;
+  }
+  100%{
+    color: rgb(241, 225, 225);
+    font-size: 3em;
+    margin: 0 1em;
+    word-wrap: break-word;
+    /* font-size: 3rem;
+    margin-left: 24rem;
+    margin-right: 24rem; */
+    border-radius: 20px;
+    background-color: rgba(255 , 255 , 255 , 0.2);
+    box-shadow: 0 0 10px 6px;
+  }
+}
+.date.animate1{
+  animation: animate1 0.7s ease forwards;
+}
+@keyframes animate1 {
+  0%{
+    color: green;
+    font-size: 0.5rem;
+  }
+  20%{
+    color: rgb(20, 136, 20);
+    font-size: 1rem;
+  }
+  40%{
+    color: rgb(79, 182, 79);
+    font-size: 1.5rem;
+  }
+  60%{
+    color: rgb(116, 189, 116);
+    font-size: 2rem;
+  }
+  80%{
+    color: rgb(151, 204, 151);
+    font-size: 2.5rem;
+  }
+  100%{
+    margin-top: 6px;
+    color: rgb(241, 225, 225);
+    font-size: 3em;
+    margin: 0.4em 1em;
+    word-wrap: break-word;
+    /* font-size: 3rem; */
+    /* margin-left: 24rem; */
+    /* margin-right: 24rem; */
+    border-radius: 20px;
+    background-color: rgba(255 , 255 , 255 , 0.2);
+    box-shadow: 0 0 10px 6px;
+  }
+}
+.weather.animate2{
+  animation: animate2 1s ease forwards;
+}
+@keyframes animate2 {
+  0%{
+    color: green;
+    font-size: 0.5rem;
+  }
+  20%{
+    color: rgb(20, 136, 20);
+    font-size: 1rem;
+  }
+  40%{
+    color: rgb(79, 182, 79);
+    font-size: 1.5rem;
+  }
+  60%{
+    color: rgb(116, 189, 116);
+    font-size: 2rem;
+  }
+  80%{
+    color: rgb(151, 204, 151);
+    font-size: 2.5rem;
+  }
+  100%{
+    color: rgb(241, 225, 225);
+    font-size: 3em;
+    margin: 0 1em;
+    word-wrap: break-word;
+    /* margin-left: 24rem;
+    margin-right: 24rem; */
+    border-radius: 20px;
+    background-color: rgba(255 , 255 , 255 , 0.2);
+    box-shadow: 0 0 10px 6px;
+  }
+}
